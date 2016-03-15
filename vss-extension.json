@@ -1,0 +1,39 @@
+{
+    "manifestVersion": 1,
+    "id": "vsts-task-publish-playstore",
+    "name": "Publish PlayStore",
+    "version": "0.0.1",
+    "publisher": "chohfi",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Publish your APK to Google PlayStore (Alpha, Beta, Production or Rollout)",
+    "categories": [
+        "Build and release"
+    ],
+    "icons": {
+        "default": "extension-icon.jpg"        
+    },
+    "files": [
+        {
+            "path": "publish-playstore"
+        }
+    ],
+	"scopes": [
+        "vso.build_execute"
+    ],
+    "contributions": [
+        {
+            "id": "publish-playstore",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "publish-playstore"
+            }
+        }
+    ]
+}
