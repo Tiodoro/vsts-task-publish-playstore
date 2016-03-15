@@ -52,10 +52,10 @@ else
         mkdir $pythonFileName
         
         $zipExtractPath = $currentPath + '\' + $pythonFileName
-        Expand-ZIPFile –SourcePath $zipPath –DestinationPath $zipExtractPath
+        Expand-ZIPFile -SourcePath $zipPath -DestinationPath $zipExtractPath
         Rename-Item "$($zipExtractPath)\python35.zip" "python35_.zip"
         mkdir "$($zipExtractPath)\python35.zip"
-        Expand-ZIPFile –SourcePath "$($zipExtractPath)\python35_.zip" –DestinationPath "$($zipExtractPath)\python35.zip"
+        Expand-ZIPFile -SourcePath "$($zipExtractPath)\python35_.zip" -DestinationPath "$($zipExtractPath)\python35.zip"
 
         $path = $currentPath + '\' + $pythonFileName
     }
