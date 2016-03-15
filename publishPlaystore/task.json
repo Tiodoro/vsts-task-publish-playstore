@@ -1,8 +1,8 @@
 {
     "id": "20810FDA-9C24-482A-A00C-6FCC16B30FD0",
     "name": "publishPlaystore",
-    "friendlyName": "Publish PlayStore",
-    "description": "Publish your APK to Google PlayStore (Alpha, Beta, Production or Rollout)",
+    "friendlyName": "Publish to Google Play Store",
+    "description": "Publish your APK to Google Play Store (Alpha, Beta, Production or Rollout)",
     "helpMarkDown": "[More Information](https://github.com/azchohfi/vsts-task-publish-playstore)",
     "category": "Build",
     "visibility": [
