@@ -78,4 +78,4 @@ echo $pip
 
 . $pip install --upgrade google-api-python-client
 
-. $p .\upload_apks_with_listing.py br.com.lambda3.PocIcatu $apkPath -language $locale -jsonFile $jsonFile -message $message -track $track
+. $p .\upload_apks_with_listing.py $apkPath -language $locale -jsonFile $jsonFile -message $message -track $track
