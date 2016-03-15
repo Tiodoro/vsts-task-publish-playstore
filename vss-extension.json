@@ -1,39 +1,45 @@
 {
-    "manifestVersion": 1,
-    "id": "vsts-task-publish-playstore",
-    "name": "Publish to Google Play Store",
-    "version": "0.1.0",
-    "publisher": "chohfi",
-	"icons": {
-         "default": "publishPlaystore/icon.png" 
-    },
-    "targets": [
-        {
-            "id": "Microsoft.VisualStudio.Services"
-        }
-    ],    
-    "description": "Publish your APK to Google Play Store (Alpha, Beta, Production or Rollout)",
-    "categories": [
-        "Build and release"
-    ],
-    "files": [
-        {
-            "path": "publishPlaystore"
-        }
-    ],
-	"scopes": [
-        "vso.build_execute"
-    ],
-    "contributions": [
-        {
-            "id": "publishPlaystore",
-            "type": "ms.vss-distributed-task.task",
-            "targets": [
-                "ms.vss-distributed-task.tasks"
-            ],
-            "properties": {
-                "name": "publishPlaystore"
-            }
-        }
-    ]
+  "manifestVersion": 1,
+  "id": "vsts-task-publish-playstore",
+  "name": "Publish to Google Play Store",
+  "version": "1.0.0",
+  "publisher": "chohfi",
+  "public": true
+  "icons": {
+    "default": "images/service-logo.png"
+  },
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "description": "Publish your APK to Google Play Store (Alpha, Beta, Production or Rollout)",
+  "categories": [
+    "Build and release"
+  ],
+  "files": [
+    {
+      "path": "publishPlaystore"
+    }
+  ],
+  "content": {
+    "license": {
+      "path": "LICENSE.md"
+    }
+  }
+  "scopes": [
+    "vso.build_execute"
+  ],
+  "contributions": [
+    {
+      "id": "publishPlaystore",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "publishPlaystore"
+      }
+    }
+  ]
 }
