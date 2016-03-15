@@ -13,9 +13,6 @@
     "categories": [
         "Build and release"
     ],
-    "icons": {
-        "default": "extension-icon.jpg"        
-    },
     "files": [
         {
             "path": "publish-playstore"
