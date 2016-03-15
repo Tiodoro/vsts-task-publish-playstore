@@ -17,13 +17,6 @@
     },
     "demands": [],
     "minimumAgentVersion": "1.83.0",
-    "groups": [
-        {
-            "name": "advanced",
-            "displayName": "Advanced",
-            "isExpanded": true
-        }
-    ],
     "inputs": [
         {
             "name": "jsonFile",

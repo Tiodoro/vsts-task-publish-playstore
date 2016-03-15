@@ -17,12 +17,22 @@
   "categories": [
     "Build and release"
   ],
+  "tags": [
+    "google",
+    "playstore",
+    "apk",
+    "publish",
+    "store"
+  ],
   "files": [
     {
       "path": "publishPlaystore"
     }
   ],
   "content": {
+    "details": {
+      "path": "README.md"
+    },
     "license": {
       "path": "LICENSE.md"
     }
@@ -30,6 +40,18 @@
   "scopes": [
     "vso.build_execute"
   ],
+  "links": {
+    "getstarted": {
+      "uri": "https://github.com/azchohfi/vsts-task-publish-playstore"
+    },
+    "support": {
+      "uri": "https://github.com/azchohfi/vsts-task-publish-playstore/issues"
+    }
+  },
+  "branding": {
+    "color": "rgb(251, 175, 105)",
+    "theme": "dark"
+  },
   "contributions": [
     {
       "id": "publishPlaystore",
