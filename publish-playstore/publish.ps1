@@ -1,6 +1,7 @@
 param (
     [string]$jsonFile = $(throw "-jsonFile is required."),
     [string]$apkPath = $(throw "-apkPath is required."),
+	[string]$packageName = $(throw "-packageName is required."),
     [string]$locale = $(throw "-locale is required."),
     [string]$message = $(throw "-message is required."),
     [string]$track = $(throw "-track is required.")
@@ -19,6 +20,7 @@ function Expand-ZipFile()
     [System.IO.Compression.ZipFile]::ExtractToDirectory($SourcePath, $DestinationPath)
 }
 
+echo $packageName;
 echo $apkPath
 
 $pythonVersion = "3.5.1"
@@ -44,11 +46,11 @@ else
     {
         echo "Downloading Python $($pythonVersion)"
         $pythonUrl = 'https://www.python.org/ftp/python/{0}/{1}' -f $pythonVersion, $pythonFileNameWithExtension
-        Invoke-WebRequest $pythonUrl -OutFile $pythonFileNameWithExtension
-
+		$zipPath = $currentPath + '\' + $pythonFileNameWithExtension
+        Invoke-WebRequest $pythonUrl -OutFile $zipPath
+		
         mkdir $pythonFileName
-
-        $zipPath = $currentPath + '\' + $pythonFileNameWithExtension
+        
         $zipExtractPath = $currentPath + '\' + $pythonFileName
         Expand-ZIPFile –SourcePath $zipPath –DestinationPath $zipExtractPath
         Rename-Item "$($zipExtractPath)\python35.zip" "python35_.zip"
@@ -78,4 +80,6 @@ echo $pip
 
 . $pip install --upgrade google-api-python-client
 
-. $p .\upload_apks_with_listing.py $apkPath -language $locale -jsonFile $jsonFile -message $message -track $track
+$uploadApkPath = "$($currentPath)\upload_apks_with_listing.py"
+
+. $p $uploadApkPath $packageName $apkPath -language $locale -jsonFile $jsonFile -message $message -track $track

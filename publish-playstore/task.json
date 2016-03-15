@@ -41,6 +41,14 @@
             "defaultValue": "",
             "helpMarkDown": ""
         },
+		{
+            "name": "packageName",
+            "type": "string",
+            "label": "Package Name",
+            "required": true,
+            "defaultValue": "",
+            "helpMarkDown": ""
+        },
         {
             "name": "locale",
             "type": "string",
