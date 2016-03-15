@@ -1,6 +1,7 @@
 param (
     [string]$jsonFile = $(throw "-jsonFile is required."),
     [string]$apkPath = $(throw "-apkPath is required."),
+	[string]$packageName = $(throw "-packageName is required."),
     [string]$locale = $(throw "-locale is required."),
     [string]$message = $(throw "-message is required."),
     [string]$track = $(throw "-track is required.")
@@ -19,6 +20,7 @@ function Expand-ZipFile()
     [System.IO.Compression.ZipFile]::ExtractToDirectory($SourcePath, $DestinationPath)
 }
 
+echo $packageName;
 echo $apkPath
 
 $pythonVersion = "3.5.1"
@@ -80,4 +82,4 @@ echo $pip
 
 $uploadApkPath = "$($currentPath)\upload_apks_with_listing.py"
 
-. $p $uploadApkPath $apkPath -language $locale -jsonFile $jsonFile -message $message -track $track
+. $p $uploadApkPath $packageName $apkPath -language $locale -jsonFile $jsonFile -message $message -track $track
