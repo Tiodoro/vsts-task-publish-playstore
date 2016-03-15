@@ -46,11 +46,11 @@ else
     {
         echo "Downloading Python $($pythonVersion)"
         $pythonUrl = 'https://www.python.org/ftp/python/{0}/{1}' -f $pythonVersion, $pythonFileNameWithExtension
-        Invoke-WebRequest $pythonUrl -OutFile $pythonFileNameWithExtension
-
+		$zipPath = $currentPath + '\' + $pythonFileNameWithExtension
+        Invoke-WebRequest $pythonUrl -OutFile $zipPath
+		
         mkdir $pythonFileName
-
-        $zipPath = $currentPath + '\' + $pythonFileNameWithExtension
+        
         $zipExtractPath = $currentPath + '\' + $pythonFileName
         Expand-ZIPFile –SourcePath $zipPath –DestinationPath $zipExtractPath
         Rename-Item "$($zipExtractPath)\python35.zip" "python35_.zip"
