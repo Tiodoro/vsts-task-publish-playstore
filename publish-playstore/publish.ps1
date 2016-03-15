@@ -78,4 +78,6 @@ echo $pip
 
 . $pip install --upgrade google-api-python-client
 
-. $p .\upload_apks_with_listing.py $apkPath -language $locale -jsonFile $jsonFile -message $message -track $track
+$uploadApkPath = "$($currentPath)\upload_apks_with_listing.py"
+
+. $p $uploadApkPath $apkPath -language $locale -jsonFile $jsonFile -message $message -track $track
