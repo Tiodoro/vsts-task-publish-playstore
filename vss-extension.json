@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "vsts-task-publish-playstore",
     "name": "Publish PlayStore",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "publisher": "chohfi",
     "targets": [
         {
@@ -15,7 +15,7 @@
     ],
     "files": [
         {
-            "path": "publish-playstore"
+            "path": "publishPlaystore"
         }
     ],
 	"scopes": [
@@ -23,13 +23,13 @@
     ],
     "contributions": [
         {
-            "id": "publish-playstore",
+            "id": "publishPlaystore",
             "type": "ms.vss-distributed-task.task",
             "targets": [
                 "ms.vss-distributed-task.tasks"
             ],
             "properties": {
-                "name": "publish-playstore"
+                "name": "publishPlaystore"
             }
         }
     ]
