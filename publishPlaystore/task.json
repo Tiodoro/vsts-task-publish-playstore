@@ -13,7 +13,7 @@
     "version": {
         "Major": 1,
         "Minor": 0,
-        "Patch": 0
+        "Patch": 1
     },
     "demands": [],
     "minimumAgentVersion": "1.83.0",
@@ -24,15 +24,15 @@
             "label": "JSON File",
             "defaultValue": "",
             "required": true,
-            "helpMarkDown": ""
+            "helpMarkDown": "Path to the JSON file of a Service Account created at [Google Developers Console](https://console.developers.google.com/apis/credentials)"
         },
 		{
             "name": "apkPath",
             "type": "string",
-            "label": "APK Path",
+            "label": "APK File",
             "required": true,
             "defaultValue": "",
-            "helpMarkDown": ""
+            "helpMarkDown": "Relative path from repo root of the APK file."
         },
 		{
             "name": "packageName",
@@ -40,7 +40,7 @@
             "label": "Package Name",
             "required": true,
             "defaultValue": "",
-            "helpMarkDown": ""
+            "helpMarkDown": "Package name for this application. The unique identifier used by your Android application ('package' property of 'AndroidManifest.xml')."
         },
         {
             "name": "locale",
@@ -56,7 +56,7 @@
             "label": "Update Message",
             "defaultValue": "",
             "required": true,
-            "helpMarkDown": ""
+            "helpMarkDown": "Message used on the 'Recent Changes' field of your update on Google Play."
         },
 		{
             "name": "track",
@@ -70,7 +70,7 @@
 				"production": "Production",
 				"rollout": "Rollout"
             },
-            "helpMarkDown": ""
+            "helpMarkDown": "Google Play's track that your APK will be published."
         }
     ],
     "instanceNameFormat": "Publish $(app) to Google Play Store",

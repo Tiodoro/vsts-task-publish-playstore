@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "vsts-task-publish-playstore",
   "name": "Publish to Google Play Store",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "chohfi",
   "public": true,
   "icons": {
