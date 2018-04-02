@@ -1,3 +1,5 @@
+# This package is no longer maintained. Please use Microsoft's oficial one: https://github.com/Microsoft/google-play-vsts-extension
+
 # vsts-task-publish-playstore
 A simple task for uploading your APK to Google Play Store.
 
